@@ -1,0 +1,478 @@
+/* Opening opacity effect followed by zoom and darken */
+@keyframes fadeInZoomAndFade {
+  0% {
+    opacity: 0; /* Starting fully transparent */
+    transform: scale(1.5); /* No zoom initially */
+  }
+  30% {
+    opacity: .4; /* Fade in to full visibility */
+    transform: scale(1.2); /* Still no zoom */
+  }
+  50% {
+    opacity: .8; /* Fade in to full visibility */
+    transform: scale(1); /* Still no zoom */
+  }
+  100% {
+    transform: scale(1.2); /* Final zoom */
+    opacity: 0; /* Darken further */
+  }
+}
+
+.header {
+  z-index: 10;
+  background-color: #202020;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  position: relative;
+  z-index: 10; 
+  height: 64px; 
+}
+
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./assets/background.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  animation: fadeInZoomAndFade 30s ease-in-out infinite; /* 15 seconds duration, looping */
+  background-attachment: scroll;
+}
+
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 2rem;
+    background-color: #202020;
+
+}
+
+.clock_content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.clock_content h1{
+    color: var(--white-color);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin: 5rem 0 2rem 0;
+}
+
+.clock_content h3 {
+    color: var(--secondary-color);
+    font-weight: 300;
+    margin-bottom: 1rem;
+    padding:0 5px;
+    text-align: center;
+    margin: 0 0 5rem 0;
+}
+
+
+.flip-clock {
+    --fcc-flip-duration: 0.5s; /* transition duration when flip card */
+    --fcc-spacing: 4px; /* space between unit times and separators */
+    --fcc-digit-block-width: 30px; /* width of digit card */
+    --fcc-digit-block-height: 55px; /* height of digit card, highly recommend in even number */
+    --fcc-digit-block-radius: 20px; /* border radius of digit card */
+    --fcc-digit-block-spacing: 5px; /* space between blocks in each unit of time */
+    --fcc-digit-font-size: 30px; /* font size of digit */
+    --fcc-digit-color: white; /* color of digit */
+    --fcc-label-font-size: 10px; /* font size of label */
+    --fcc-label-color: #ffffff; /* color of label */
+    --fcc-background: #1A3928; /* background of digit card */
+    --fcc-divider-color: white; /* color of divider */
+    --fcc-divider-height: 1px; /* height of divider */
+    --fcc-separator-size: 5px; /* size of colon */
+    --fcc-separator-color: #ffff; /* color of colon */
+  }
+
+  .sub-button{
+    margin-top: 0%;
+  }
+
+  .button{
+    position: relative;
+    z-index: 10;
+    width: 100px;
+    height: 40px;
+    padding: 0 10px;
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--white-color);
+    background-color: var(--quaternary-color);
+    border:1px solid var(--primary-color);
+    border-radius: 5px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: var(--quaternary-color);
+    color: var(--white-color);
+    transform: translateX(-20px);
+    box-shadow: 0 15px 20px rgba(46, 229, 157, 0.4);
+  }
+
+
+
+/* Modal overlay (background) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal content box */
+.modal-content {
+  background-color: var(--white-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+/* Modal title */
+.modal-title {
+  font-size: 15px;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+/* Input field */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--quaternary-color);
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+/* Success message */
+.success-message {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--quaternary-color);
+  margin-bottom: 20px;
+}
+
+/* Modal subscribe button */
+.modal-subscribe-button {
+  background-color: var(--quaternary-color);
+  color: var(--white-color);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.modal-subscribe-button:hover {
+  background-color: var(--quaternary-color);
+  color: var(--white-color);
+  transform: translateY(-7px);
+  box-shadow: 0 15px 20px rgba(46, 229, 157, 0.4);
+}
+
+.close-button {
+  background-color: transparent;
+  border: none;
+  color: #555;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.close-button:hover {
+  text-decoration: underline;
+}
+
+
+/****** CARD ******/
+.card-container{
+  margin-top: 5rem;
+  display: flex;
+  gap: 15px;
+}
+
+.card {
+  overflow: visible;
+  width: 100px;
+  height: 100px;
+
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms;
+  box-shadow: 0px 0px 10px 1px #000000ee;
+  border-radius: 5px;
+}
+
+.front, .back {
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.back::before {
+  position: absolute;
+  content: ' ';
+  display: block;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(90deg, transparent, #e1f340, #e1f340, #e1f340, #e1f340, transparent);
+  animation: rotation_481 5000ms infinite linear;
+}
+
+.back-content {
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  background-color: var(--quaternary-color);
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.card:hover .content {
+  transform: rotateY(180deg);
+}
+
+@keyframes rotation_481 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  0% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.front {
+  transform: rotateY(180deg);
+  color: white;
+}
+
+.front .front-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.front-content .badge {
+  background-color: #00000055;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  width: fit-content;
+}
+
+.description {
+  box-shadow: 0px 0px 10px 5px #00000088;
+  padding: 1rem .5rem;
+  background-color: #00000099;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 10px;
+  font-weight: 200;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items:end;
+}
+
+.title p {
+  width: 50%;
+}
+
+
+.front .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  position: relative;
+  filter: blur(15px);
+  animation: floating 2600ms infinite linear;
+}
+
+#bottom {
+  background-color: var(--quaternary-color);
+  left: 50px;
+  top: 0px;
+  width: 150px;
+  height: 150px;
+  animation-delay: -800ms;
+}
+
+#right {
+  background-color: var(--tertiary-color);
+  left: 160px;
+  top: -80px;
+  width: 50px;
+  height: 30px;
+  animation-delay: -1800ms;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
+  @media (min-width: 800px) {
+    .header{
+      padding: 2rem 5rem;
+    }
+
+    .logo {
+      height: 120px; 
+    }
+
+    .clock_content h1{
+        font-size: 2rem;
+        margin: 2rem 0 1rem 0;
+    }
+
+    .sub-button{
+      margin-top: 20%;
+    }
+
+    .button{  
+      border-radius: 10px;
+       margin-bottom:1rem;
+        width: 210px;
+        height: 65px;
+        font-size: 1.5rem;
+    }
+
+    .flip-clock{
+      --fcc-spacing: 10px;
+      --fcc-digit-block-spacing: 10px; 
+      --fcc-label-font-size: 20px;
+      --fcc-separator-size: 6px;
+        --fcc-digit-block-width: 80px;
+        --fcc-digit-block-height: 140px;
+        --fcc-digit-font-size: 60px;
+        --fcc-label-font-size: 20px; 
+
+    }
+
+    .card-container{
+      gap: 50px;
+    }
+
+    .card {
+      width: 250px;
+      height: 150px;
+    }
+
+    .title {
+      font-size: 20px;
+    }
+  }
+
+  
