@@ -8,7 +8,7 @@ body, html{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Ubuntu", serif;
+  font-family: "Ubuntu",sans-serif, serif;
   letter-spacing: 4px;
   height: 100;
 
