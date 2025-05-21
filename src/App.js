@@ -30,12 +30,12 @@ function App() {
           className="flip-clock"
           to={new Date("2025-07-01").getTime()} // Sabit bir tarih belirleyin
           labels={["GÜN", "SAAT", "DAKİKA", "SANİYE"]}
-          duration={0.5}
+          duration={0.7}
         />
         <div className="card-container">
-          <Card name="Güvenlik" icon={<FaFingerprint size={50} color="#E6D7B3" />} />
-          <Card name="Konfor" icon={<FaMugHot size={50} color="#E6D7B3" />} />
-          <Card name="Tasarruf" icon={<FaBolt size={50} color="#E6D7B3" />} />
+          <Card name="Güvenlik" icon={<FaFingerprint size={50} color="#e1f340" />} />
+          <Card name="Konfor" icon={<FaMugHot size={50} color="#e1f340" />} />
+          <Card name="Tasarruf" icon={<FaBolt size={50} color="#e1f340" />} />
         </div>
       </div>
     </section>

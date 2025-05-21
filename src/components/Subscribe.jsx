@@ -68,7 +68,7 @@ const Subscribe = () => {
           <div className="modal-content">
             {!submitted ? (
               <>
-                <h2 className="modal-title">En Yeni Güncellemeler için Bültenimize Abone Olun</h2>
+                <h2 className="modal-title">Bültenimize Abone Olun</h2>
 
                 <input
                   type="email"
