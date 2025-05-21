@@ -29,7 +29,7 @@ function App() {
         <FlipClockCountdown
           className="flip-clock"
           to={new Date().getTime() + 60 * 24 * 3600 * 1000}  // 60 days in milliseconds
-          labels={["DAYS", "HOURS", "MINS", "SECS"]}
+          labels={["GÜN", "SAAT", "DAKİKA", "SANİYE"]}
           duration={0.5}
         />
         <div className="card-container">

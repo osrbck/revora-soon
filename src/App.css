@@ -73,7 +73,7 @@
     color: var(--white-color);
     font-size: 0.8rem;
     text-transform: uppercase;
-    margin: 5rem 0 2rem 0;
+    margin: 10rem 0 2rem 0;
 }
 
 .clock_content h3 {
@@ -82,23 +82,22 @@
     margin-bottom: 1rem;
     padding:0 5px;
     text-align: center;
-    margin: 0 0 5rem 0;
 }
 
 
 .flip-clock {
     --fcc-flip-duration: 0.5s; /* transition duration when flip card */
     --fcc-spacing: 4px; /* space between unit times and separators */
-    --fcc-digit-block-width: 30px; /* width of digit card */
-    --fcc-digit-block-height: 55px; /* height of digit card, highly recommend in even number */
+    --fcc-digit-block-width: 40px; /* width of digit card */
+    --fcc-digit-block-height: 60px; /* height of digit card, highly recommend in even number */
     --fcc-digit-block-radius: 20px; /* border radius of digit card */
     --fcc-digit-block-spacing: 5px; /* space between blocks in each unit of time */
-    --fcc-digit-font-size: 30px; /* font size of digit */
+    --fcc-digit-font-size: 40px; /* font size of digit */
     --fcc-digit-color: white; /* color of digit */
     --fcc-label-font-size: 10px; /* font size of label */
     --fcc-label-color: #ffffff; /* color of label */
     --fcc-background: #1A3928; /* background of digit card */
-    --fcc-divider-color: white; /* color of divider */
+    --fcc-divider-color: #f9f9f942; /* color of divider */
     --fcc-divider-height: 1px; /* height of divider */
     --fcc-separator-size: 5px; /* size of colon */
     --fcc-separator-color: #ffff; /* color of colon */
