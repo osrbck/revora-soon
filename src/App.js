@@ -33,9 +33,9 @@ function App() {
           duration={0.5}
         />
         <div className="card-container">
-          <Card name="Güvenli" icon={<FaFingerprint size={50} color="#E6D7B3" />} />
-          <Card name="Konforlu" icon={<FaMugHot size={50} color="#E6D7B3" />} />
-          <Card name="Tasarruflu" icon={<FaBolt size={50} color="#E6D7B3" />} />
+          <Card name="Güvenlik" icon={<FaFingerprint size={50} color="#E6D7B3" />} />
+          <Card name="Konfor" icon={<FaMugHot size={50} color="#E6D7B3" />} />
+          <Card name="Tasarruf" icon={<FaBolt size={50} color="#E6D7B3" />} />
         </div>
       </div>
     </section>
