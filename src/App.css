@@ -73,14 +73,14 @@
     color: var(--primary-color);
     font-size: 1.5rem;
     text-transform: uppercase;
-    margin: 8rem 1rem 2rem 1rem;
+    margin: 5rem 1rem 2rem 1rem;
 }
 
 .clock_content h3 {
     color: var(--white-color);
     font-size: .7rem;
     font-weight: 400;
-    margin: 2rem 1rem 2rem 1rem;
+    margin: 0 1rem 2rem 1rem;
     padding:0 5px;
     text-align: center;
 }
@@ -243,7 +243,7 @@
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: transform 300ms;
+  transition: transform 800ms;
   box-shadow: 0px 0px 10px 1px #000000ee;
   border-radius: 5px;
 }
@@ -434,11 +434,12 @@
 
     .clock_content h1{
         font-size: 2rem;
-        margin: 6rem 0 1rem 0;
+        margin: 2rem 0 1rem 0;
     }
 
     .clock_content h3{
       font-size: 1.3rem;
+      margin: 2rem 1rem 2rem 1rem;
     }
 
     .sub-button{
