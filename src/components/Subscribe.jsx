@@ -31,10 +31,10 @@ const Subscribe = () => {
       // EmailJS ile gönder
       emailjs
         .send(
-          "service_tu3n28u", // EmailJS servis ID'niz
-          "template_u2shxkq", // EmailJS template ID'niz
-          { email: email }, // Template'de kullandığınız değişken
-          "-YSanrzaH4442I3AL" // Public key
+          process.env.REACT_APP_EMAILJS_SERVICE_ID,
+          process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+          { email: email },
+          process.env.REACT_APP_EMAILJS_PUBLIC_KEY
         )
         .then(() => {
           setSubmitted(true);
