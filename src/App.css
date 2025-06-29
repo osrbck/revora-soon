@@ -13,7 +13,7 @@
     transform: scale(1); /* Still no zoom */
   }
   100% {
-    transform: scale(1.5); /* Final zoom */
+    transform: scale(1.2); /* Final zoom */
     opacity: .1; /* Darken further */
   }
 }

@@ -28,7 +28,7 @@ function App() {
       
         <FlipClockCountdown
           className="flip-clock"
-          to={new Date("2025-07-01").getTime()} // Sabit bir tarih belirleyin
+          to={new Date("2025-07-10").getTime()} // Sabit bir tarih belirleyin
           labels={["GÜN", "SAAT", "DAKİKA", "SANİYE"]}
           duration={0.7}
         />
