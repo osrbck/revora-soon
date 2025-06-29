@@ -1,7 +1,7 @@
 /* Opening opacity effect followed by zoom and darken */
 @keyframes fadeInZoomAndFade {
   0% {
-    opacity: 0; /* Starting fully transparent */
+    opacity: .1; /* Starting fully transparent */
     transform: scale(1.5); /* No zoom initially */
   }
   30% {
@@ -14,7 +14,7 @@
   }
   100% {
     transform: scale(1.2); /* Final zoom */
-    opacity: 0; /* Darken further */
+    opacity: .1; /* Darken further */
   }
 }
 
